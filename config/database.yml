@@ -49,6 +49,9 @@ test:
 #
 production:
   <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
   database: hosi_production
   username: hosi
   password: <%= ENV['HOSI_DATABASE_PASSWORD'] %>
